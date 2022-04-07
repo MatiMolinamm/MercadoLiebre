@@ -9,6 +9,7 @@ header {
 header p {
   display: contents;
   margin-left: 10%;
+  font-size: 16px;
 }
 header i{
     margin-left: 1%;
@@ -40,7 +41,7 @@ footer i {
 }
 p {
   font-family: Roboto;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 700;
 }
 h2 {
