@@ -1,12 +1,7 @@
 * {
   margin: 0%;
+  padding: 0%;
   box-sizing: border-box;
-}
-
-p {
-  font-family: Roboto;
-  font-size: 0.75rem;
-  font-weight: 700;
 }
 
 body {
@@ -15,12 +10,35 @@ body {
 }
 
 header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: #eac926;
   width: 100vw;
 }
 
 header img {
   width: 100%;
+}
+#header {
+  width: 47%;
+  margin-top: 4px;
+  padding: 2%;
+}
+header nav {
+  margin-top: 15px;
+  width: 50%;
+  padding: 2%;
+}
+header nav form {
+  margin-top: 5px;
+  display: flex;
+  width: 100%;
+  margin: auto;
+}
+
+input {
+  width: 80%;
 }
 
 header p {
@@ -33,26 +51,38 @@ header i {
   margin-left: 1%;
 }
 
-header form {
-  margin-left: 10%;
-}
-
 header ul {
+  display: inline;
+  justify-content: space-around;
   margin-left: 5%;
   list-style: none;
   display: none;
+}
+header ul li a {
+  color: black;
+  text-decoration: solid;
 }
 
 main {
   width: 90vw;
   margin: auto;
+  background-color: #ebebeb;
 }
 
 main h2 {
   color: #666;
   text-align: left;
+  width: 100%;
+  color: #666;
+  margin-top: 15px;
+  font-size: 1rem;
 }
 
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 article {
   background-color: white;
   margin: 10px;
@@ -73,7 +103,10 @@ footer {
   text-align: center;
   background-color: #ebebeb;
 }
-
+footer article {
+  background-color: #ebebeb;
+  padding: 1%;
+}
 footer h3 {
   font-family: Roboto;
   font-size: 1rem;
@@ -83,7 +116,14 @@ footer h3 {
 footer i {
   color: #1259c3;
 }
-
+footer p {
+  margin-top: 5px;
+}
+p {
+  font-family: Roboto;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
 h2 {
   font-family: Roboto;
   font-size: 1.5rem;
@@ -91,10 +131,48 @@ h2 {
 }
 
 li {
+  display: inline;
   font-size: 1.125rem;
   mask-type: none;
+  margin-left: 15px;
+}
+form div {
+  background-color: #ebebeb;
+  font-family: "Roboto";
+  width: 100%;
+  margin: 1px;
+}
+form label {
+  display: block;
+  font-weight: bold;
+}
+.perfilDeUsuario {
+  display: block;
+}
+.perfilDeUsuario input {
+  width: 5%;
+  margin-top: 20px;
+  margin-left: 35px;
+}
+.interes {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.interes input {
+  display: inline;
+  width: 5%;
+}
+.interes span {
+  display: inline;
+  width: 90%;
 }
 
+.header {
+  background-color: #eac926;
+  border: none;
+  width: 90%;
+}
 .articulos {
   width: 400px;
   height: 400px;
@@ -103,36 +181,77 @@ li {
 .burger-menu {
   border: solid 1px #1259c3;
   background-color: #1259c3;
+  border-radius: 4px;
   margin-right: 48%;
   margin-left: 48%;
+  margin-bottom: 16px;
+  margin-top: 0px;
   text-align: center;
   color: #ebebeb;
-  padding: 0.5%;
+  padding: 1.5%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+}
+.section div {
+  background-color: white;
+  border: none;
+  padding: 0px;
 }
 .section i {
   border: solid 1px rgb(77, 233, 77);
-  padding: 5px;
+  padding: 1%;
   border-radius: 100%;
   color: rgb(77, 233, 77);
+  position: relative;
+  margin-top: -32px;
+  margin-left: 90%;
+  width: 28px;
 }
-
+.fa-truck:before {
+  content: "\f0d1";
+  margin: auto;
+}
 #precios {
-  font-size: 1.5rem;
+  font-size: 1rem;
+  display: inline;
 }
 
 #descuentos {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: rgb(77, 233, 77);
+  display: inline;
+  margin-inline-start: 1.5%;
 }
 
 #descripciones {
-  font-size: 1rem;
+  font-size: 0.8rem;
   color: #666;
   margin-top: 18px;
   display: none;
 }
 
-@media (min-width: 361px) {
+@media (min-width: 481px) {
+  header nav {
+    width: 33%;
+    margin-left: 3%;
+  }
+  #header {
+    width: 30%;
+  }
+  .header p {
+    font-size: 0.6rem;
+  }
+  .header {
+    width: 34%;
+    padding: 3%;
+  }
+
+  section article {
+    width: 40%;
+  }
   #descripciones {
     display: block;
   }
@@ -140,12 +259,37 @@ li {
   article {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
   }
-
+  header {
+    justify-content: space-between;
+  }
   header ul {
-    display: block;
+    display: inline;
+    width: 45%;
+  }
+  header ul li {
+    margin-left: 0 px;
+  }
+  header ul li p {
+    font-size: 0.75rem;
+  }
+  footer article {
+    background-color: #ebebeb;
+    padding: 1%;
+    box-shadow: none;
   }
 
   .burger-menu {
     display: none;
+  }
+  .section i {
+    margin-top: -30px;
+  }
+}
+
+@media (min-width: 769px) {
+  section article {
+    width: 22%;
+  }
+  .section i {
   }
 }
