@@ -44,7 +44,7 @@ input {
 header p {
   display: contents;
   margin-left: 10%;
-  font-size: 1rem;
+  font-size: 14px;
 }
 
 header i {
@@ -61,6 +61,7 @@ header ul {
 header ul li a {
   color: black;
   text-decoration: solid;
+  font-size: 14px;
 }
 
 main {
@@ -166,6 +167,17 @@ form label {
 .interes span {
   display: inline;
   width: 90%;
+}
+.boton {
+  display: flex;
+  justify-content: space-evenly;
+}
+.boton button {
+  width: 49%;
+  color: white;
+  background-color: #1259c3;
+  border: none;
+  border-radius: 2px;
 }
 
 .header {
