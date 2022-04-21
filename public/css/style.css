@@ -31,10 +31,18 @@ header nav {
   padding: 2%;
 }
 header nav form {
+  position: relative;
   margin-top: 5px;
   display: flex;
   width: 100%;
   margin: auto;
+}
+.fa-search:before {
+  content: "\f002";
+  color: gray;
+  position: absolute;
+  left: 68%;
+  top: 7.5%;
 }
 
 input {
@@ -62,6 +70,8 @@ header ul li a {
   color: black;
   text-decoration: solid;
   font-size: 14px;
+  position: relative;
+  bottom: 4px;
 }
 
 main {
@@ -236,15 +246,22 @@ form label {
 }
 .section i {
   border: solid 1px rgb(77, 233, 77);
-  padding: 1%;
+  padding: 4px;
   border-radius: 100%;
   color: rgb(77, 233, 77);
   position: relative;
   margin-top: -32px;
-  margin-left: 90%;
+  margin-left: 85%;
   width: 28px;
+  height: 28px;
+  perspective: 700px;
+  transition-duration: 1000ms;
 }
-.fa-truck:before {
+.section i:hover {
+  transform: rotate3d(1.5, 2, -8.5, 50deg);
+ 
+}
+.fa-truck:before:hover {
   content: "\f0d1";
   margin: auto;
 }
@@ -304,7 +321,7 @@ form label {
     margin-left: 0 px;
   }
   header ul li p {
-    font-size: 0.75rem;
+    font-size: 8px;
   }
   footer article {
     background-color: #ebebeb;
@@ -331,4 +348,10 @@ form label {
   section article {
     width: 22%;
   }
+  .fa-search:before {
+    content: "\f002";
+    color: gray;
+    position: absolute;
+    left: 72%;
+    top: 7.5%;
 }
