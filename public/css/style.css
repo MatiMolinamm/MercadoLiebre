@@ -88,6 +88,14 @@ article {
   background-color: white;
   margin: 10px;
 }
+article .descripciones {
+  display: none;
+  transition-duration: 600ms;
+}
+
+article:hover .descripciones {
+  display: block;
+}
 
 div {
   background-color: white;
@@ -101,6 +109,9 @@ section img {
 }
 
 footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   text-align: center;
   background-color: #ebebeb;
 }
@@ -110,15 +121,21 @@ footer article {
 }
 footer h3 {
   font-family: Roboto;
-  font-size: 1rem;
+  font-size: 14px;
   font-weight: bold;
 }
 
 footer i {
   color: #1259c3;
+  transition-property: color;
+  transition-duration: 450ms;
+}
+footer i:hover {
+  color: aqua;
 }
 footer p {
-  margin-top: 5px;
+  margin-top: 8px;
+  font-size: 10px;
 }
 p {
   font-family: Roboto;
@@ -170,14 +187,19 @@ form label {
 }
 .boton {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 .boton button {
   width: 49%;
   color: white;
-  background-color: #1259c3;
+  background-color: #7083a0;
   border: none;
   border-radius: 2px;
+  transition-property: background;
+  transition-duration: 450ms;
+}
+.boton button:hover {
+  background-color: #0022aa;
 }
 
 .header {
@@ -226,19 +248,19 @@ form label {
   content: "\f0d1";
   margin: auto;
 }
-#precios {
+.precios {
   font-size: 1rem;
   display: inline;
 }
 
-#descuentos {
+.descuentos {
   font-size: 0.8rem;
   color: rgb(77, 233, 77);
   display: inline;
   margin-inline-start: 1.5%;
 }
 
-#descripciones {
+.descripciones {
   font-size: 0.8rem;
   color: #666;
   margin-top: 18px;
@@ -265,7 +287,7 @@ form label {
     width: 40%;
   }
   #descripciones {
-    display: block;
+    display: none;
   }
 
   article {
@@ -296,12 +318,17 @@ form label {
   .section i {
     margin-top: -30px;
   }
+  footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    text-align: center;
+    background-color: #ebebeb;
+  }
 }
 
 @media (min-width: 769px) {
   section article {
     width: 22%;
-  }
-  .section i {
   }
 }
