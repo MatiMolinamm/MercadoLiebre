@@ -1,7 +1,9 @@
 * {
   margin: 0%;
+  margin: auto;
   padding: 0%;
   box-sizing: border-box;
+  max-width: 1200px;
 }
 
 body {
@@ -37,11 +39,16 @@ header nav form {
   width: 100%;
   margin: auto;
 }
+header button {
+  background-color: #eac926;
+  border: none;
+  margin-left: 3px;
+}
 .fa-search:before {
   content: "\f002";
   color: gray;
-  position: absolute;
-  left: 68%;
+  position: relative;
+  left: -1%;
   top: 7.5%;
 }
 
@@ -104,7 +111,7 @@ article .descripciones {
 }
 
 article:hover .descripciones {
-  display: block;
+  display: inline;
 }
 
 div {
@@ -116,6 +123,7 @@ div {
 section img {
   width: 100%;
   margin: auto;
+  padding: 15px;
 }
 
 footer {
@@ -217,7 +225,15 @@ form label {
   background-color: #eac926;
   border: none;
   width: 90%;
+  text-align: center;
 }
+.left {
+  text-align: start;
+}
+.rigth {
+  text-align: -webkit-center;
+}
+
 .articulos {
   width: 400px;
   height: 400px;
@@ -259,8 +275,8 @@ form label {
   transition-duration: 1000ms;
 }
 .section i:hover {
-  transform: rotate3d(1.5, 2, -8.5, 50deg);
- 
+  /*transform: rotate3d(1.5, 2, -8.5, 50deg);*/
+  transform: rotateZ(-90deg);
 }
 .fa-truck:before:hover {
   content: "\f0d1";
@@ -315,7 +331,7 @@ form label {
     justify-content: space-between;
   }
   header ul {
-    display: inline;
+    display: flex;
     width: 45%;
   }
   header ul li {
@@ -343,9 +359,17 @@ form label {
     text-align: center;
     background-color: #ebebeb;
   }
+  ul .rigth {
+    text-align: center;
+    margin-right: -60px;
+  }
 }
 
 @media (min-width: 769px) {
+  header ul {
+    display: block;
+    width: 45%;
+  }
   section article {
     width: 22%;
   }
@@ -353,6 +377,7 @@ form label {
     content: "\f002";
     color: gray;
     position: absolute;
-    left: 72%;
-    top: 7.5%;
+    left: 91%;
+    top: 3px;
+  }
 }
