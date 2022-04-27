@@ -253,13 +253,14 @@ form label {
 }
 
 .section {
-  display: flex;
-  flex-direction: column;
+  height: 60px;
 }
 .section div {
   background-color: white;
   border: none;
   padding: 0px;
+  position: relative;
+  top: -27px;
 }
 .section i {
   border: solid 1px rgb(77, 233, 77);
@@ -273,6 +274,7 @@ form label {
   height: 28px;
   perspective: 700px;
   transition-duration: 1000ms;
+  top: -29px;
 }
 .section i:hover {
   /*transform: rotate3d(1.5, 2, -8.5, 50deg);*/
@@ -295,10 +297,15 @@ form label {
 }
 
 .descripciones {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   color: #666;
   margin-top: 18px;
   display: none;
+  position: relative;
+  top: -25px;
+}
+#copyright {
+  margin: auto;
 }
 
 @media (min-width: 481px) {
@@ -359,9 +366,8 @@ form label {
     text-align: center;
     background-color: #ebebeb;
   }
-  ul .rigth {
-    text-align: center;
-    margin-right: -60px;
+  .left {
+    padding-right: 26px;
   }
 }
 
